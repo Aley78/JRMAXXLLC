@@ -1,0 +1,17 @@
+.wdt-horizontal-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--wdtTertiaryColor);
+    z-index: 11;
+}
+.wdt-horizontal-progress-bar .progress-bar {
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(228deg, var(--wdtSecondaryColor), var(--wdtSecondaryColor));
+    transition: background 0.15s ease;
+}
+
+.logged-in.admin-bar .wdt-horizontal-progress-bar { top: 32px; }

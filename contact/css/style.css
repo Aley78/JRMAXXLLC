@@ -1,0 +1,113 @@
+.wdt-logistic-calculator__input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wdt-logistic-calculator__input-group input {
+    flex: 1;
+}
+
+.wdt-logistic-calculator__input-group .wdt-logistic-calculator__unit {
+    padding-left: 15px;
+    border-left: 1px solid rgba(var(--wdtBorderColorRgb), .3);
+}
+
+.wdt-logistic-calculator .wdt-logistics-field-set1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+.wdt-logistic-calculator .wdt-logistics-field-set2{
+    display: flex;
+    column-gap: 20px;
+    align-items: end;
+}
+.wdt-logistic-calculator__input-group > span{
+    position: absolute;
+    right: 15px;
+    font-size: var(--wdtFontSize_Ext);
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 3px;
+}
+.wdt-logistic-calculator .wdt-logistics-field-set2 div > label,
+.wdt-logistic-calculator .wdt-logistics-field-set1 div > label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.wdt-logistic-calculator{
+    padding: 30px;
+    padding-bottom: 80px;
+    background-color: var(--wdtTertiaryColor);
+}
+.wdt-logistic-calculator .wdt-logistic-calculator__result {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: var(--wdtInputPadding);
+    background-color: rgba(var(--wdtHeadAltColorRgb),.25);
+    text-align: center;
+}
+.wdt-logistic-calculator .wdt-logistic-calculator__result > p {
+    margin-bottom: 0;
+}
+.wdt-logistic-calculator .wdt-logistic-calculator__field button {
+    box-shadow: 5px 5px 0px rgba(var(--wdtPrimaryColorRgb), 25%);
+    padding: var(--wdtInputPadding);
+    line-height: normal;
+    min-height: 46px;
+    width: 100%;
+}
+.wdt-logistic-calculator .wdt-logistic-calculator__field button:hover {
+    box-shadow: -5px -5px 0px rgba(var(--wdtSecondaryColorRgb), 25%);
+}
+.wdt-logistic-calculator .select2-container--default .select2-selection--single .select2-selection__arrow{
+    min-width: 35px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(var(--wdtBorderColorRgb), .3);
+}
+.wdt-logistic-calculator .select2-container--default .select2-selection--single .select2-selection__arrow b{
+    margin-left: 2px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1540px){
+    .wdt-logistic-calculator .wdt-logistics-field-set2{
+        flex-wrap: wrap;
+        column-gap: 0;
+        row-gap: 20px;
+        margin-left: -20px;
+    }
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div{
+        flex-basis: 33.3%;
+        padding-left: 20px;
+    }
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div:nth-child(-n+2){
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .wdt-logistic-calculator .wdt-logistics-field-set1{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 20px;
+    }
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div{
+        flex-basis: 50%;
+    }
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div:last-child { flex-basis: 100%; }
+}
+@media screen and (max-width: 479px){
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div,
+    .wdt-logistic-calculator .wdt-logistics-field-set2 > div:nth-child(-n+2){
+        flex-basis: 100%;
+    }
+    .wdt-logistic-calculator{
+        padding: 20px;
+        padding-bottom: 70px;
+    }
+}

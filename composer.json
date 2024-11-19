@@ -1,0 +1,9 @@
+{
+  "require": {
+    "stripe/stripe-php": "^16.2",
+    "monolog/monolog": "^3.7",
+    "symfony/http-foundation": "^7.1",
+    "guzzlehttp/guzzle": "^7.9",
+    "phpmailer/phpmailer": "^6.9"
+  }
+}

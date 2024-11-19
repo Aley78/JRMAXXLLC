@@ -46,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Email headers
         $mail->setFrom('pdfestimator@gmail.com', 'PDF Estimator');
-        $mail->addAddress('anmirza37@gmail.com', 'Recipient Name'); // Correct recipient email
+        $mail->addAddress('contact@jrmaxllc.com', 'Recipient Name'); // Correct recipient email
         $mail->isHTML(true);
         $mail->Subject = "New Form Submission";
         $mail->Body = $message;
 
         // Send email
         $mail->send();
-        echo "Email sent successfully!";
+        header('location:index.html');
     } catch (Exception $e) {
         echo "Email could not be sent. Error: {$mail->ErrorInfo}";
     }

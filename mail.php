@@ -9,9 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $dob = htmlspecialchars($_POST['dob']);
     $phone_no = htmlspecialchars($_POST['phone_no']);
-    $address = htmlspecialchars($_POST['address']);
+    $address = htmlspecialchars($_POST['email']);
     $license = htmlspecialchars($_POST['License']);
     $references = htmlspecialchars($_POST['references']);
+    $address = htmlspecialchars($_POST['address']);
     $experience = htmlspecialchars($_POST['experience']);
 
     // Email content
@@ -22,9 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Name:</strong> $name</p>
         <p><strong>DOB:</strong> $dob</p>
         <p><strong>Phone No:</strong> $phone_no</p>
-        <p><strong>Address:</strong> $address</p>
+        <p><strong>Email:</strong> $email</p>
         <p><strong>License #:</strong> $license</p>
         <p><strong>References:</strong> $references</p>
+        <p><strong>Address:</strong> $address</p>
         <p><strong>Experience:</strong></p>
         <p>$experience</p>
     </body>
@@ -46,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Email headers
         $mail->setFrom('pdfestimator@gmail.com', 'PDF Estimator');
-        $mail->addAddress('contact@jrmaxllc.com', 'Recipient Name'); // Correct recipient email
+        $mail->addAddress('jrmaxxllc@gmail.com', 'Recipient Name'); // Correct recipient email
         $mail->isHTML(true);
         $mail->Subject = "New Form Submission";
         $mail->Body = $message;

@@ -65,3 +65,20 @@ body {
 #form-inline textarea::placeholder {
   color: #000;
 }
+
+#myHover {
+  position: relative;
+}
+
+#innerHover {
+  position: absolute;
+  max-width: 600px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#myHover:hover #innerHover {
+  opacity: 1;
+}
